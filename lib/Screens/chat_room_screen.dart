@@ -54,18 +54,15 @@ class _ChatRoomState extends State<ChatRoom> {
 
     });
   }
-
   Future imageUpload () async{
     String imageId = Uuid().v1();
     int status = 1;
-
     await firestore.collection('chatroom').doc(widget.chatRoomID).collection('chats').doc(imageId).set({
       'sendby': auth.currentUser!.displayName,
       'message':"",
       'type':'img',
       'time':FieldValue.serverTimestamp()
     });
-
     var ref = FirebaseStorage.instance.ref().child('images').child('$imageId.jpg');
     var uploadTask = await ref.putFile(imageFile!).catchError((error)async{
       await firestore.collection('chatroom').doc(widget.chatRoomID).collection('chats').doc(imageId).delete();
@@ -102,14 +99,11 @@ class _ChatRoomState extends State<ChatRoom> {
                 stream: firestore.collection('chatroom').doc(widget.chatRoomID).collection('chats')
                     .orderBy('time',descending: false).snapshots(),
                 builder: (BuildContext context,AsyncSnapshot<QuerySnapshot> snapshot){
-
                   if(snapshot.data != null){
-
                     return ListView.builder(
                          itemCount: snapshot.data!.docs.length,
                          itemBuilder: (context,index){
                            Map<String, dynamic>? map = snapshot.data!.docs[index].data() as Map<String, dynamic>?;
-
                            return messageWidget(size,map);
 
                     });
