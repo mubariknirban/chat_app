@@ -102,12 +102,9 @@ class _ChatRoomState extends State<ChatRoom> {
                     .orderBy('time',descending: false).snapshots(),
                 builder: (BuildContext context,AsyncSnapshot<QuerySnapshot> snapshot){
                   if(snapshot.data != null){
-
                     return ListView.builder(
                          itemCount: snapshot.data!.docs.length,
-
                          itemBuilder: (context,index){
-
                            Map<String, dynamic>? map = snapshot.data!.docs[index].data() as Map<String, dynamic>?;
                            return messageWidget(size,map);
                     });

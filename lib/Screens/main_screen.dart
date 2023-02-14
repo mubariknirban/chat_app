@@ -105,7 +105,6 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver{
 
           child: Column(
             children: [
-
               StreamBuilder<QuerySnapshot>(
                 stream: firestore.collection('user').snapshots(),
                 builder: (BuildContext context,AsyncSnapshot<QuerySnapshot> snapshot){
