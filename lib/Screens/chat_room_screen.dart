@@ -92,8 +92,6 @@ class _ChatRoomState extends State<ChatRoom> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-
-
             Container(
               height: size.height / 1.25,
               width: size.width,
@@ -110,8 +108,6 @@ class _ChatRoomState extends State<ChatRoom> {
                     });
                   }
                   else{
-
-
                     return Container();
                   }
                 },

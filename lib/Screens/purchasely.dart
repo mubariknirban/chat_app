@@ -183,7 +183,9 @@ class _MyAppState extends State<purchasely> {
 
   Future<void> restoreAllProducts() async {
     bool restored;
+
     print('start restoration');
+
     try {
       restored = await Purchasely.restoreAllProducts();
     } catch (e) {
