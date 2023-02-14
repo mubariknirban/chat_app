@@ -107,6 +107,8 @@ class _ChatRoomState extends State<ChatRoom> {
                            return messageWidget(size,map);
 
                     });
+
+
                   }
                   else{
                     return Container();
