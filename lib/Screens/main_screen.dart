@@ -98,10 +98,14 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver{
         ],
       ),
       body: SingleChildScrollView(
+
         child: Padding(
+
           padding: const EdgeInsets.all(10),
+
           child: Column(
             children: [
+
               StreamBuilder<QuerySnapshot>(
                 stream: firestore.collection('user').snapshots(),
                 builder: (BuildContext context,AsyncSnapshot<QuerySnapshot> snapshot){
