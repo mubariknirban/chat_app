@@ -91,6 +91,8 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
           child: const Icon(Icons.add),
         )
             : null,
+
+
         floatingActionButtonLocation: _fabLocation,
         bottomNavigationBar: _DemoBottomAppBar(
           fabLocation: _fabLocation,

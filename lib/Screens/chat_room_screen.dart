@@ -156,7 +156,7 @@ class _ChatRoomState extends State<ChatRoom> {
 
     return map!['type'] == "text" ? Container(
       width: size.width,
-      alignment: map!['sendby'] == auth.currentUser!.displayName ?
+      alignment: map['sendby'] == auth.currentUser!.displayName ?
       Alignment.centerRight : Alignment.centerLeft,
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
