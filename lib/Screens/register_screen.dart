@@ -132,8 +132,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     backgroundColor: Colors.blue
                 ),
                 onPressed: ()async{
-
-
                   if(TextControllers.emailController.text.isNotEmpty && TextControllers.passwordController.text.isNotEmpty){
 
                     createAccount(
@@ -152,7 +150,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     });
 
                   }
-
                 },
                 child: const Text("Register")),
           ],

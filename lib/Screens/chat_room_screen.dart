@@ -105,10 +105,7 @@ class _ChatRoomState extends State<ChatRoom> {
                          itemBuilder: (context,index){
                            Map<String, dynamic>? map = snapshot.data!.docs[index].data() as Map<String, dynamic>?;
                            return messageWidget(size,map);
-
                     });
-
-
                   }
                   else{
                     return Container();

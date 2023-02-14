@@ -131,7 +131,6 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver{
                                 fontWeight: FontWeight.w500,
                                 fontSize: 17
                             ),
-
                             ),
                             subtitle: Row(
                               children: [
